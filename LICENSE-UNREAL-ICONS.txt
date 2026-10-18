@@ -1,0 +1,22 @@
+The icons shown on this site are part of Unreal Engine
+(files below Engine/Content/Editor/Slate and Engine/Content/Slate).
+
+Copyright Epic Games, Inc. All rights reserved.
+
+The icons are NOT released under an open license. They are covered by the
+Unreal Engine End User License Agreement (https://www.unrealengine.com/eula).
+The MIT license of this repository (see LICENSE) applies only to the code of
+this site, not to the icons. No rights to the icons are granted by this
+repository. They are shown only as a developer reference, so that people who
+work with Unreal Engine can find the name of an editor icon and the code that
+uses it.
+
+Changes made for this site: none to the image content. Identical files of
+different engine versions are stored only once and renamed to a short hash
+(img/<hash>.svg|png).
+
+If Epic Games asks for removal, the icons will be removed.
+
+"Unreal" and "Unreal Engine" are trademarks or registered trademarks of
+Epic Games, Inc. This site is unofficial and not affiliated with or
+endorsed by Epic Games.

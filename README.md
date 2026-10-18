@@ -18,7 +18,7 @@ The icons are the `.svg`/`.png` files below `Engine/Content/Editor/Slate` and `E
 
 ## License
 
-* The icons are (c) Epic Games, Inc. and covered by the Unreal Engine EULA. They are shown only as a developer reference and are not offered under an open license. If Epic asks for removal, they will be removed.
+* The icons are (c) Epic Games, Inc. and covered by the Unreal Engine EULA. They are shown only as a developer reference and are not offered under an open license. If Epic asks for removal, they will be removed. See `LICENSE-UNREAL-ICONS.txt`.
 * The code of this site (everything else) is MIT licensed, see `LICENSE`.
 
 This is an unofficial project, not affiliated with or endorsed by Epic Games. "Unreal" and "Unreal Engine" are trademarks of Epic Games, Inc.
