@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Godot Editor Icons</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="style.css?v=20261015">
+</head>
+<body>
+<header>
+ <div class="line">
+  <h1><span id="eng">Editor</span> <span class="sub">Editor Icons</span></h1>
+  <div class="vpick"><button id="vbtn" class="vbtn" aria-haspopup="listbox" aria-expanded="false" aria-label="Engine version"></button><div id="vlist" class="vlist" role="listbox" aria-label="Engine version" hidden></div></div>
+  <div class="search"><input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="Search icons" aria-label="Search" autofocus><kbd>/</kbd></div>
+  <div class="tintbar" title="Tint all icons: pick a colour and every icon is shown in it (white and grey icons tint cleanly)"><div class="wpick"><button class="wsw" id="wb" aria-haspopup="dialog" aria-expanded="false" aria-label="Tint icons with a colour"><span class="wring"></span><span class="wlab">Tint</span><span class="wchip"></span></button><div class="wpop" id="wp" hidden><canvas id="wc" width="220" height="220" aria-label="Colour picker: ring for the hue, square for saturation and brightness"></canvas><label class="wl">Brightness<input type="range" id="wv" min="0" max="100" value="100"></label><input type="text" id="tx" placeholder="#rrggbb" aria-label="Tint colour as hex"></div></div><button class="btn" id="tr" title="Remove the tint">Reset</button></div>
+  <span class="cnt" id="c" aria-live="polite"></span>
+ </div>
+ <div class="line">
+  <select id="so" aria-label="Sort"><option value="az">Sort: A&ndash;Z</option><option value="size">Sort: size &darr;</option></select>
+  <div class="seg" id="ty" role="group" aria-label="Type" hidden><button class="btn on" data-v="">All</button><button class="btn" data-v="svg">SVG</button><button class="btn" data-v="png">PNG</button></div>
+  <button class="btn" id="sharp" title="Hide PNG icons smaller than 24 px (they look blurry when scaled up)" hidden>Sharp only</button>
+  <button class="btn" id="nw" title="Show only icons that were added in this version" hidden>New in this version</button>
+  <button class="btn" id="gn" title="Show only icons that are removed in a later version" hidden>Removed later</button>
+  <label class="lbl" for="cp" style="margin-left:auto">On click copy</label>
+  <select id="cp" aria-label="What a click copies"></select>
+  <span class="lbl">Size</span>
+  <div class="seg" id="zs" role="group" aria-label="Icon size"><button class="btn" id="zm" title="Smaller (-)">&minus;</button><button class="btn" data-z="16">16</button><button class="btn" data-z="24">24</button><button class="btn" data-z="32">32</button><button class="btn" data-z="48">48</button><button class="btn" data-z="64">64</button><button class="btn" data-z="96">96</button><button class="btn" data-z="128">128</button><button class="btn" id="zp" title="Larger (+)">+</button></div>
+  <button class="btn" id="th" title="Light / dark page">&#9680;</button>
+ </div>
+ <div class="chips" id="chips" aria-label="Quick filter by name"></div>
+</header>
+<main id="m"></main>
+<aside id="d" aria-label="Icon details"><div class="hd"><b id="dk">Details</b><div class="acts"><button class="btn" id="dp" title="Previous (&larr;)">&larr;</button><button class="btn" id="dn" title="Next (&rarr;)">&rarr;</button><button class="btn" id="dx" title="Close (Esc)">&#10005;</button></div></div><div class="bd" id="db"></div></aside>
+<div class="toast" id="ts"></div>
+<footer id="ft"></footer>
+<script src="app.js?v=20261015"></script>
+</body>
+</html>

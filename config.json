@@ -1,0 +1,75 @@
+{
+  "engine": "Unreal",
+  "title": "Unreal Editor Icons",
+  "accent": "#4C8DF6",
+  "keyLabel": "Path",
+  "snippets": [
+    {
+      "group": "app",
+      "from": "5.1",
+      "needs": "a",
+      "label": "FSlateIcon",
+      "code": "FSlateIcon(FAppStyle::GetAppStyleSetName(), \"{alias}\")",
+      "note": "FSlateIcon is for menus, toolbars and commands (the Icon argument of FToolMenuEntry::InitToolBarButton / InitMenuEntry). Brush is for widgets, e.g. SNew(SImage).Image(...)."
+    },
+    {
+      "group": "app",
+      "from": "5.1",
+      "needs": "a",
+      "label": "Brush",
+      "code": "FAppStyle::GetBrush(\"{alias}\")"
+    },
+    {
+      "group": "app",
+      "from": "4.25",
+      "needs": "a",
+      "label": "FSlateIcon",
+      "code": "FSlateIcon(FEditorStyle::GetStyleSetName(), \"{alias}\")",
+      "note": "FSlateIcon is for menus, toolbars and commands (FToolBarBuilder::AddToolBarButton, FMenuBuilder::AddMenuEntry). Brush is for widgets, e.g. SNew(SImage).Image(...)."
+    },
+    {
+      "group": "app",
+      "from": "4.25",
+      "needs": "a",
+      "label": "Brush",
+      "code": "FEditorStyle::GetBrush(\"{alias}\")"
+    },
+    {
+      "group": "x",
+      "from": "4.25",
+      "needs": "x",
+      "label": "FSlateIcon",
+      "code": "FSlateIcon(\"{style}\", \"{key}\")",
+      "note": "This name belongs to the style set \"{style}\" of one editor module or plugin; it only works while that module is loaded. FindSlateStyle returns nullptr otherwise."
+    },
+    {
+      "group": "x",
+      "from": "4.25",
+      "needs": "x",
+      "label": "Brush",
+      "code": "FSlateStyleRegistry::FindSlateStyle(\"{style}\")->GetBrush(\"{key}\")"
+    },
+    {
+      "group": "file",
+      "from": "4.25",
+      "label": "Brush",
+      "code": "{cls}(FPaths::EngineContentDir() / TEXT(\"{under}\"), FVector2D({w}, {g}))",
+      "note": "The engine itself does not register this icon under a name (it may even be unused), so it is loaded from the engine folder. Editor tools only: Engine/Content/Editor is not part of packaged games. Keep the brush alive, e.g. as a member variable or inside your FSlateStyleSet."
+    },
+    {
+      "group": "file",
+      "from": "4.25",
+      "label": "Style set",
+      "code": "Set(\"MyPlugin.MyIcon\", new {cls}(FPaths::EngineContentDir() / TEXT(\"{under}\"), FVector2D({w}, {g})))"
+    }
+  ],
+  "tint": [
+    {
+      "label": "C++",
+      "code": "SNew(SImage).ColorAndOpacity(FLinearColor::FromSRGBColor(FColor::FromHex(TEXT(\"{hex}\"))))  // multiplies the icon colour; or SetColorAndOpacity() on an existing SImage"
+    }
+  ],
+  "footer": "Unofficial overview, not affiliated with or endorsed by Epic Games. Unreal&reg; and Unreal Engine&reg; are trademarks of Epic Games, Inc. The editor icons are &copy; Epic Games, Inc. and shown here only as a reference for Unreal Engine developers; they stay Epic's property and can be removed on request.",
+  "aliasLabel": "Code name",
+  "catRoot": "^(Editor/)?Slate/"
+}
